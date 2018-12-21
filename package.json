@@ -5,7 +5,6 @@
   "main": "vo-browser-support.js",
   "scripts": {
     "prepare": "npm run copy",
-    "test": "./node_modules/mocha/bin/mocha --ui tdd test/**/*.test.js --reporter spec",
     "copy": "npm run copy:outdatedbrowser .",
     "copy:outdatedbrowser": "copyfiles -f node_modules/outdatedbrowser/outdatedbrowser/*.min.*",
     "release": "np"
