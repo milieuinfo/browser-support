@@ -1,0 +1,30 @@
+{
+  "name": "vo-browser-support",
+  "version": "0.0.1",
+  "description": "browser support component",
+  "main": "vo-browser-support.js",
+  "scripts": {
+    "prepare": "npm run copy",
+    "test": "./node_modules/mocha/bin/mocha --ui tdd test/**/*.test.js --reporter spec",
+    "copy": "npm run copy:outdatedbrowser .",
+    "copy:outdatedbrowser": "copyfiles -f node_modules/outdatedbrowser/outdatedbrowser/*.min.*",
+    "release": "np"
+  },
+  "author": "Tom Coemans",
+  "license": "ISC",
+  "devDependencies": {
+    "copyfiles": "2.1.0",
+    "chai": "4.1.2",
+    "jsdom": "11.11.0",
+    "mocha": "5.2.0",
+    "sinon": "6.0.1",
+    "np": "3.0.4",
+    "gpg": "0.6.0"
+  },
+  "publishConfig": {
+    "registry": "http://artifactory-pr-build.lb.cumuli.be:8081/artifactory/api/npm/acd-npm/"
+  },
+  "dependencies": {
+    "outdatedbrowser": "1.1.5"
+  }
+}
