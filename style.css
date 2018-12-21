@@ -1,0 +1,69 @@
+@font-face {
+  font-family: vlaanderen_iconfont;
+  src: url(./font/vlaanderen_iconfont.woff);
+}
+
+#outdated_container {
+  font-family: Flanders Art;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background: #FBE6E6;
+}
+
+#outdated {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  padding: 10px 0px 10px 0px;
+  max-width: 1040px;
+  overflow: auto;
+  background: #FBE6E6 !important;
+}
+
+#outdated > h6 {
+  margin: 0px;
+  font-size: 1em;
+}
+
+#outdated > h6 > div {
+  float: left;
+  color: #333;
+}
+
+#outdated > h6 .icon {
+  font-family: vlaanderen_iconfont;
+  background: #DB3434;
+  color: #FFF;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+#outdated > h6 .icon:before {
+  content: "\E032";
+}
+
+#outdated > h6 .title {
+  font-weight: 500;
+}
+
+#outdated > h6 div {
+  font-weight: normal;
+}
+
+#outdated > p {
+  display: none;
+}
+
+#outdated .last {
+  display: none;
+}
+
+#outdated a {
+  color: #333;
+}
