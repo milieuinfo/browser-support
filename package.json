@@ -1,8 +1,8 @@
 {
-  "name": "vo-browser-support",
+  "name": "browser-support",
   "version": "0.0.1",
   "description": "browser support component",
-  "main": "vo-browser-support.js",
+  "main": "browser-support.js",
   "scripts": {
     "prepare": "npm run copy",
     "copy": "npm run copy:outdatedbrowser .",
