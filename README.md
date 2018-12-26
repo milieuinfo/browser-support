@@ -67,7 +67,7 @@ Momenteel zijn volgende id's voorzien:
 * ![#outdated_container](https://placehold.it/15/fc0d1c/000000?text=+) `#outdated_container`
 * ![#outdated](https://placehold.it/15/fffd38/000000?text=+) `#outdated`
 
-![Alt text](https://github.com/milieuinfo/gdpr/blob/master/img/readme3.png?raw=true "Browser support tekst HTML id")
+![Alt text](https://github.com/milieuinfo/browser-support/blob/master/img/readme3.png?raw=true "Browser support tekst HTML id")
 
 ## Ontwikkelaars
 
