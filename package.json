@@ -5,6 +5,7 @@
   "main": "browser-support.js",
   "scripts": {
     "prepare": "npm run copy",
+    "test": "./node_modules/mocha/bin/mocha --ui tdd test/**/*.test.js --reporter spec",
     "copy": "npm run copy:dependency .",
     "copy:dependency": "copyfiles -f node_modules/outdated-browser-rework/dist/*.js .",
     "release": "np"

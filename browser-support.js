@@ -7,29 +7,40 @@
     document.head.appendChild(script);
     document.head.appendChild(style);
 
-    document
-
     script.addEventListener('load', function() {
         var element = getDependencyElement();
         document.body.appendChild(element);
         
         outdatedBrowserRework({
             browserSupport: {
-                'Chrome': false
+                'Chrome': getBrowserVersion('chrome'),
+                'Edge': getBrowserVersion('edge'),
+                'Safari': getBrowserVersion('safari'),
+                'Mobile Safari': getBrowserVersion('mobile-safari'),
+                'Firefox': getBrowserVersion('firefox'),
+                'Opera': getBrowserVersion('opera'),
+                'Vivaldi': getBrowserVersion('vivaldi'),
+                'IE': getBrowserVersion('ie')
             },
+            isUnknownBrowserOK: false,
             messages: {
                 nl: {
                     outOfDate: "" +
                         "<div class='icon'></div>" + 
                         "<div>" + 
-                            "<div class='title'>Opgelet!</div>" + 
-                            "<div>U gebruikt een browser die niet ondersteund wordt. Voor een optimale ervaring, gebruik een <a href='http://outdatedbrowser.com/nl' target='_blank'>recente browser</a>.</div>" + 
+                            "<div id='outdated_title'>" + getTitle() + "</div>" + 
+                            "<div id='outdated_message'>" + getMessage() + "</div>" + 
                         "</div>"
                 }
-            }
+            },
+            language: 'nl'
         });
         window.onload();
     });
+
+    function getBrowserSupportScript() {
+        return document.querySelector('#browser_support_script');
+    }
 
     function getDependencyScript() {
         var script = document.createElement('script');
@@ -54,5 +65,19 @@
         
         container.appendChild(element);
         return container;
+    }
+
+    function getBrowserVersion(browser) {
+        return JSON.parse(getBrowserSupportScript().getAttribute(browser + '-versie') || true);
+    }
+
+    function getTitle() {
+        const titel = getBrowserSupportScript().getAttribute('titel');
+        return !!titel ? titel : "Opgelet!";
+    }
+
+    function getMessage() {
+        const tekst = getBrowserSupportScript().getAttribute('bericht');
+        return !!tekst ? tekst : "U gebruikt een browser die niet ondersteund wordt. Voor een optimale ervaring, gebruik een <a href='http://outdatedbrowser.com/nl' target='_blank'>recente browser</a>.";
     }
 })();
