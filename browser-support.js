@@ -44,7 +44,7 @@
 
     function getDependencyScript() {
         var script = document.createElement('script');
-        script.setAttribute('src', './outdated-browser-rework.min.js');
+        script.setAttribute('src', 'https://cdn.milieuinfo.be/browser-support/LATEST/outdated-browser-rework.min.js');
         return script;
     }
 
@@ -52,7 +52,7 @@
         var link = document.createElement('link');
         link.setAttribute('rel', 'stylesheet');
         link.setAttribute('type', 'text/css');
-        link.setAttribute('href', './style.css');
+        link.setAttribute('href', 'https://cdn.milieuinfo.be/browser-support/LATEST/style.css');
         return link;
     }
 
