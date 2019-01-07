@@ -1,6 +1,6 @@
 {
   "name": "browser-support",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "browser support component",
   "main": "browser-support.js",
   "scripts": {
