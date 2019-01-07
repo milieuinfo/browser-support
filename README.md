@@ -56,6 +56,20 @@ Het is mogelijk om per type browser te bepalen vanaf welke versie de website of 
 <script id="browser_support_script" src="https://cdn.milieuinfo.be/browser-support/LATEST/browser-support.js" chrome-versie="71" ie-versie="false"></script>
 ```
 
+#### Andere browsers
+
+Zoals eerder vermeld, worden al de gekende browsers standaard ondersteund. Indien slechts enkele browsers ondersteund worden, zou het niet gebruiksvriendelijk zijn om ook al de andere browsers te gaan definiëren via de attributen. Daarom werd het attribuut andere-browsers-worden-ondersteund voorzien.
+
+```html
+<script id="browser_support_script" src="https://cdn.milieuinfo.be/browser-support/LATEST/browser-support.js" chrome-versie="71" andere-browsers-worden-onderteund="false"></script>
+```
+
+In bovenstaand voorbeeld word Chrome versie 71 ondersteund en al de andere browsers niet. Indien we dit attribuut niet op false zouden zetten, moeten we om bovenstaande te bereiken onderstaande configuratie voorzien.
+
+```html
+<script id="browser_support_script" src="https://cdn.milieuinfo.be/browser-support/LATEST/browser-support.js" chrome-versie="71" edge-versie="false" safari-versie="false" mobile-safari-versie="false" firefox-versie="false" operat-versie="false" vivaldi-versie="false" ie-versie="false"></script>
+```
+
 ## Stijl
 
 De DOM zal uitgebreid worden met 1 element:

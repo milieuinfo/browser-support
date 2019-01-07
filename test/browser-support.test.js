@@ -8,10 +8,10 @@ const { assert } = chai;
 const sandbox = sinon.createSandbox();
 const userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36';
 
-function setup() {
+function setup(defaultValue = true) {
     return new JSDOM(`
         <head>
-            <script id="browser_support_script" src="./browser-support.js"></script>
+            <script id="browser_support_script" src="./browser-support.js" andere-browsers-worden-ondersteund="${defaultValue}"></script>
         </head>
     `, {
         runScripts: 'dangerously',
@@ -55,6 +55,15 @@ suite('browser support', function() {
             assert.exists(container);
             assert.exists(element);
             assert.isEmpty(element.innerHTML);
+            done();
+        });
+	});
+
+    test('er kan geconfigureerd worden of niet geconfigureerde browsers ondersteund woren of niet', (done) => {
+        const dom = setup(false);
+        wait(dom, () => {
+            const element = dom.window.document.querySelector('#outdated_container #outdated');
+            assert.isNotEmpty(element.innerHTML);
             done();
         });
 	});

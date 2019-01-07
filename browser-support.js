@@ -68,16 +68,21 @@
     }
 
     function getBrowserVersion(browser) {
-        return JSON.parse(getBrowserSupportScript().getAttribute(browser + '-versie') || true);
+        return JSON.parse(getBrowserSupportScript().getAttribute(browser + '-versie') || getDefaultValue());
     }
 
     function getTitle() {
-        const titel = getBrowserSupportScript().getAttribute('titel');
+        var titel = getBrowserSupportScript().getAttribute('titel');
         return !!titel ? titel : "Opgelet!";
     }
 
     function getMessage() {
-        const tekst = getBrowserSupportScript().getAttribute('bericht');
+        var tekst = getBrowserSupportScript().getAttribute('bericht');
         return !!tekst ? tekst : "U gebruikt een browser die niet ondersteund wordt. Voor een optimale ervaring, gebruik een <a href='http://outdatedbrowser.com/nl' target='_blank'>recente browser</a>.";
+    }
+
+    function getDefaultValue() {
+        var defaultValue = JSON.parse(getBrowserSupportScript().getAttribute('andere-browsers-worden-ondersteund'));
+        return defaultValue == null ? true : defaultValue;
     }
 })();
