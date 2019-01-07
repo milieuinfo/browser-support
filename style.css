@@ -1,11 +1,11 @@
 @font-face {
   font-family: vlaanderen_iconfont;
-  src: url(./font/vlaanderen_iconfont.woff);
+  src: url(https://cdn.milieuinfo.be/browser-support/LATEST/font/vlaanderen_iconfont.woff);
 }
 
 #outdated_container {
   font-family: Flanders Art;
-  position: fixed;
+  position: relative;
   top: 0px;
   left: 0px;
   width: 100%;
