@@ -4,7 +4,7 @@ De browser support component detecteert browsers die niet ondersteund worden doo
 
 ## Gebruik
 
-Het gebruik van het browser support script is zeer eenvoudig. Je moet alleen maar een script tag toevoegen aan de head sectie van de HTML pagina Opgelet, de script tag moet het id attribuut browser_support_script hebben.
+Het gebruik van het browser support script is zeer eenvoudig. Je moet alleen maar een script tag toevoegen aan de head sectie van de HTML pagina. Opgelet, de script tag moet het id attribuut browser_support_script hebben.
 
 ### Voorbeeld gebruik
 
@@ -36,7 +36,7 @@ Na het toevoegen van bovenstaand script zal er automatisch bij het laden van de 
 
 ### Configuratie
 
-Standaard worden al de gekende browser ondersteund, zoals Chrome, Edge, Safari, Mobile Safari, Firefox, Opera, Vivaldi en IE. Bij niet gekende browsers zal er een melding verschijnen. Uiteraard is de melding alsook welke browsers ondersteund worden configureerbaar.
+Standaard wordt geen enkele browser ondersteund. Uiteraard is de melding alsook welke browsers ondersteund worden configureerbaar.
 
 #### Melding
 
@@ -50,7 +50,7 @@ Het is mogelijk om de titel en de tekst naar wens aan te passen door gebruik te 
 
 #### Browsers
 
-Het is mogelijk om per type browser te bepalen vanaf welke versie de website of applicatie ondersteund wordt. Indien de gebruiker een oudere versie heeft, zal de melding getoond worden. Het is ook mogelijk om altijd een melding te tonen bij eeen type browser, dan moet het attribuut de waarde false krijgen. Standaard worden al de gekende browsers ondersteund.
+Het is mogelijk om per type browser te bepalen vanaf welke versie de website of applicatie ondersteund wordt. Indien de gebruiker een oudere versie heeft, zal de melding getoond worden. Het is ook mogelijk om altijd een melding te tonen bij eeen type browser, dan moet het attribuut de waarde false krijgen.
 
 ```html
 <script id="browser_support_script" src="https://cdn.milieuinfo.be/browser-support/LATEST/browser-support.js" chrome-versie="71" ie-versie="false"></script>
@@ -58,16 +58,22 @@ Het is mogelijk om per type browser te bepalen vanaf welke versie de website of 
 
 #### Andere browsers
 
-Zoals eerder vermeld, worden al de gekende browsers standaard ondersteund. Indien slechts enkele browsers ondersteund worden, zou het niet gebruiksvriendelijk zijn om ook al de andere browsers te gaan definiëren via de attributen. Daarom werd het attribuut andere-browsers-worden-ondersteund voorzien.
+Zoals eerder vermeld, worden al de gekende browsers standaard niet ondersteund. Het is mogelijk om bij de browsers Chrome, Edge, Safari, Mobile Safari, Firefox, Opera, Vivaldi en IE te definiëren vanaf welke versie de browser ondersteund wordt alsook dat al de versies ondersteund worden. Bij niet gekende browsers zal er altijd een melding verschijnen.
 
 ```html
-<script id="browser_support_script" src="https://cdn.milieuinfo.be/browser-support/LATEST/browser-support.js" chrome-versie="71" andere-browsers-worden-onderteund="false"></script>
+<script id="browser_support_script" src="https://cdn.milieuinfo.be/browser-support/LATEST/browser-support.js" chrome-versie="71" firefox-versie="true" ie-versie="false"></script>
 ```
 
-In bovenstaand voorbeeld word Chrome versie 71 ondersteund en al de andere browsers niet. Indien we dit attribuut niet op false zouden zetten, moeten we om bovenstaande te bereiken onderstaande configuratie voorzien.
+Standaard worden er geen browsers ondersteund, dus wanneer al de browsers behalve IE ondersteund worden, zou het niet gebruiksvriendelijk zijn om dit bij al de andere browsers te gaan definiëren via de attributen. Daarom werd het attribuut andere-browsers-worden-ondersteund voorzien.
 
 ```html
-<script id="browser_support_script" src="https://cdn.milieuinfo.be/browser-support/LATEST/browser-support.js" chrome-versie="71" edge-versie="false" safari-versie="false" mobile-safari-versie="false" firefox-versie="false" operat-versie="false" vivaldi-versie="false" ie-versie="false"></script>
+<script id="browser_support_script" src="https://cdn.milieuinfo.be/browser-support/LATEST/browser-support.js" ie-versie="false" andere-browsers-worden-onderteund></script>
+```
+
+In bovenstaand voorbeeld word IE niet ondersteund en al de andere browsers wel. Indien we dit attribuut niet op true zouden zetten, moeten we om bovenstaande te bereiken onderstaande configuratie voorzien.
+
+```html
+<script id="browser_support_script" src="https://cdn.milieuinfo.be/browser-support/LATEST/browser-support.js" chrome-versie="true" edge-versie="true" safari-versie="true" mobile-safari-versie="true" firefox-versie="true" operat-versie="true" vivaldi-versie="true" ie-versie="false"></script>
 ```
 
 ## Stijl

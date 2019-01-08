@@ -82,7 +82,10 @@
     }
 
     function getDefaultValue() {
-        var defaultValue = JSON.parse(getBrowserSupportScript().getAttribute('andere-browsers-worden-ondersteund'));
-        return defaultValue == null ? true : defaultValue;
+        try {
+            return JSON.parse(getBrowserSupportScript().getAttribute('andere-browsers-worden-ondersteund'));
+        } catch(e) {
+            return defaultValue === '' ? true : !!defaultValue;
+        }
     }
 })();

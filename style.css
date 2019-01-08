@@ -1,8 +1,3 @@
-@font-face {
-  font-family: vlaanderen_iconfont;
-  src: url(https://cdn.milieuinfo.be/browser-support/LATEST/font/vlaanderen_iconfont.woff);
-}
-
 #outdated_container {
   font-family: Flanders Art;
   position: relative;
@@ -10,6 +5,7 @@
   left: 0px;
   width: 100%;
   background: #FBE6E6;
+  font-size: 14px;
 }
 
 #outdated {
@@ -22,8 +18,7 @@
 }
 
 #outdated > h6 {
-  margin: 10px 0px 10px 0px;
-  font-size: 1em;
+  padding: 5px;
   overflow: auto;
 }
 
@@ -37,9 +32,9 @@
   background: #DB3434;
   color: #FFF;
   border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  line-height: 38px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
   text-align: center;
   margin-right: 10px;
 }
