@@ -6,9 +6,14 @@ De browser support component detecteert browsers die niet ondersteund worden doo
 
 Het gebruik van het browser support script is zeer eenvoudig. Je moet alleen maar een script tag toevoegen aan de head sectie van de HTML pagina. Opgelet, de script tag moet het id attribuut browser_support_script hebben.
 
+## Dependencies
+
+Het browser support script maakt gebruik van de Vlaanderen icoon font. Daarom moet ook het vlaanderen font script geïmporteerd worden.
+
 ### Voorbeeld gebruik
 
 ```html
+<script src="https://cdn.milieuinfo.be/vlaanderen-font/LATEST/vlaanderen-font.js"></script>
 <script id="browser_support_script" src="https://cdn.milieuinfo.be/browser-support/LATEST/browser-support.js"></script>
 ```
 
