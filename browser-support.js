@@ -9,7 +9,7 @@
 
     script.addEventListener('load', function() {
         var element = getDependencyElement();
-        document.body.prepend(element);
+        document.body.insertBefore(element, document.body.firstChild);
         
         outdatedBrowserRework({
             browserSupport: {
