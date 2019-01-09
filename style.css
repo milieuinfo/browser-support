@@ -28,6 +28,10 @@
   color: #333;
 }
 
+#outdated > h6 > #outdated_title {
+  font-weight: bold;
+}
+
 #outdated > h6 .icon {
   font-family: vlaanderen_iconfont;
   background: #DB3434;
