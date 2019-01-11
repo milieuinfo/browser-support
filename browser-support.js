@@ -28,7 +28,7 @@ window.addEventListener("load", function() {
                     nl: {
                         outOfDate: "" +
                             "<div class='icon'></div>" + 
-                            "<div>" + 
+                            "<div id='outdated_container'>" + 
                                 "<div id='outdated_title'>" + getTitle() + "</div>" + 
                                 "<div id='outdated_message'>" + getMessage() + "</div>" + 
                             "</div>"
